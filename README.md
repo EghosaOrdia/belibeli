@@ -1,69 +1,92 @@
-# React + TypeScript + Vite
+# BeliBeli
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+BeliBeli is a modern e-commerce web application built with React, TypeScript, and Vite. It offers a stylish, responsive shopping experience with features like flash sales, category browsing, a shopping cart, and notifications—all with smooth animations and a clean UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡ Flash Sale section with live countdown timer
+- 🛒 Shopping cart with quantity controls and item removal
+- 🔔 Sidebar notifications
+- 🔍 Product search and category filtering
+- 🏬 Best-selling stores showcase
+- 🎨 Modern, responsive design with custom fonts and smooth scrolling
+- 📱 "Download App" prompt for mobile users
+- Social media integration (Facebook, YouTube)
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend:** React, TypeScript, Vite
+- **Styling:** Tailwind CSS, custom fonts (Helvetica, Poppins)
+- **Icons:** Lucide React
+- **Smooth Scrolling:** Lenis
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (v16+ recommended)
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/EghosaOrdia/belibeli.git
+   cd belibeli
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+### Build for Production
+
+```bash
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Linting
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run lint
 ```
+
+## Project Structure
+
+```
+src/
+  App.tsx           # Main application component
+  App.css           # Global styles
+  assets/           # Images, fonts, constants
+    constants/
+      media.ts      # Image imports
+      variable.ts   # Data for categories, stores, etc.
+    fonts/          # Custom font files
+    images/         # Product and UI images
+public/             # Static assets
+```
+
+## Customization
+
+- Update product listings, categories, and store data in `src/assets/constants/variable.ts`.
+- Add or replace images in `src/assets/images/`.
+- Customize styles in `App.css` or extend with Tailwind classes.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+
+[MIT](LICENSE)
