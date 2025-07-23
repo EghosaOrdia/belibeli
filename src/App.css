@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --color-red1: hsl(348.88deg 85.58% 59.22%);
+  --color-grey-1: #f5f5f5;
+  --color-orangeCuston: #ff9b09;
+  --color-blackCustom: #1d242d;
+  --font-helvetica-light: helveticaLight;
+  --font-helvetica: helvetica;
+  --font-helvetica-bold: helveticaBold;
+  --font-helvetica-medium: helveticaMedium;
+  --font-poppins: poppins;
+  --font-poppins-bold: poppinsBold;
+  --font-poppins-medium: poppinsMedium;
+  --font-poppins-light: poppinsLight;
+  --font-poppins-semibold: poppinsSemibold;
+}
+@layer components {
+  .category-container {
+    @apply flex flex-col items-center justify-center gap-4;
+  }
+  .ticker {
+    @apply bg-red1 text-white py-2 px-3 rounded-full;
+  }
+  .item-container {
+    @apply min-w-2/3 md:min-w-4/9 lg:min-w-2/9 lg:max-w-1/5 bg-white flex flex-col rounded-xl overflow-clip;
+  }
+  .sales-img {
+    @apply w-full h-50 md:h-48 relative overflow-clip;
+  }
+  .sales-info {
+    @apply flex flex-col gap-y-1 p-4 bg-white;
+  }
+  .item-title {
+    @apply text-base font-poppins-semibold;
+  }
+  .item-price {
+    @apply font-poppins-bold text-xl;
+  }
+  .sales-amount {
+    @apply flex flex-row items-center gap-x-2 p-3 bg-white border-t border-gray-300 text-gray-500;
+  }
+  .sales {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  .sales::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  .filter-btn {
+    @apply px-4 py-1 rounded-md text-sm font-helvetica cursor-pointer;
+  }
+}
+@font-face {
+  font-family: helveticaLight;
+  src: url("assets/fonts/helvetica/helvetica-light.ttf");
+}
+@font-face {
+  font-family: helvetica;
+  src: url("assets/fonts/helvetica/Helvetica.otf");
+}
+@font-face {
+  font-family: helveticaBold;
+  src: url("assets/fonts/helvetica/Helvetica-Bold.otf");
+}
+@font-face {
+  font-family: helveticaMedium;
+  src: url("assets/fonts/helvetica/Helvetica-Medium.otf");
+}
+@font-face {
+  font-family: poppins;
+  src: url("assets/fonts/poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: poppinsBold;
+  src: url("assets/fonts/poppins/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: poppinsMedium;
+  src: url("assets/fonts/poppins/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: poppinsLight;
+  src: url("assets/fonts/poppins/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: poppinsSemibold;
+  src: url("assets/fonts/poppins/Poppins-SemiBold.ttf");
+}
+
+/* Vanilla */
+#hero {
+  background-image: url("assets/images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#img-bg {
+  background-image: url("assets/images/line_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
