@@ -140,11 +140,11 @@ function App() {
           isSidebarActive ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="p-6">
+        <div className="p-3 md:p-6">
           {sidebarActiveText === "Notifications" && (
             <div className="notifications font-helvetica">
               <div className="heading flex justify-between gap-x-4 items-center pb-4 border-b border-gray-300">
-                <h2 className="grow text-2xl font-helvetica-bold">
+                <h2 className="grow text-lg font-helvetica-bold lg:text-2xl">
                   Notifications
                 </h2>
                 <button className="flex flex-row items-center gap-2 text-gray-500 text-sm">
@@ -204,7 +204,7 @@ function App() {
                         </button>
                       </p>
                       <button className="flex flex-row gap-x-2 text-sm bg-gray-100 rounded-sm px-2 py-1 items-center">
-                        <span>remove</span>
+                        <span className="hidden md:flex">remove</span>
                         <X size={18} />
                       </button>
                     </div>
@@ -315,12 +315,14 @@ function App() {
       <section>
         <div className="py-16 px-8 bg-grey-1 md:px-12">
           <div className="heading flex flex-row flex-wrap items-center gap-4">
-            <Zap
-              size={44}
-              fill="white"
-              className="p-2 bg-black border border-gray-300 rounded-full"
-            />
-            <h2 className="text-4xl font-helvetica-bold">Flash Sale</h2>
+            <h2 className="w-full flex gap-x-4 items-center text-2xl font-helvetica-bold md:w-auto md:text-3xl lg:text-4xl">
+              <Zap
+                size={44}
+                fill="white"
+                className="p-2 bg-black border border-gray-300 rounded-full"
+              />
+              <span>Flash Sale</span>
+            </h2>
             <p className="timer flex items-center flex-row gap-x-2">
               <span className="ticker">{formatTime(timeLeft.hours)}</span>
               <span>:</span>
@@ -390,7 +392,9 @@ function App() {
       <section>
         <div className="py-16 px-8 bg-white md:px-12">
           <div className="heading flex flex-row flex-wrap items-center gap-4">
-            <h2 className="text-4xl font-helvetica-bold">Today For You!</h2>
+            <h2 className="text-2xl font-helvetica-bold md:text-3xl lg:text-4xl">
+              Today For You!
+            </h2>
             <div className="filter flex flex-row gap-x-4 text-sm lg:ml-auto">
               <button className="filter-btn bg-black text-white">
                 Best Seller
@@ -448,7 +452,7 @@ function App() {
       {/* Best Store */}
       <section>
         <div className="py-16 px-8 bg-white md:px-12">
-          <h2 className="text-4xl font-helvetica-bold text-center">
+          <h2 className="text-3xl font-helvetica-bold text-center lg:text-4xl">
             Best Selling Store
           </h2>
           <div className="store grid lg:grid-cols-3 gap-8 grid-4 mt-12">
